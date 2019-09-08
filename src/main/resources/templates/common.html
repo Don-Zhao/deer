@@ -17,27 +17,7 @@
 			</div>
 		</div>
 		<menu>
-			<div th:if="${#session} != null ? ${session.isLogin} : false">
-				<ul>
-					<li>
-						<a th:href="@{/user/logout}">退出</a>
-					</li>
-					<li>
-						<a th:href="@{/item/getCart}">购物车</a>
-					</li>
-					<li>
-						<a th:href="@{/item/list}">商城商品</a>
-					</li>
-					<li>
-						<a th:href="@{/item/toRecord}">添加商品</a>
-					</li>
-				</ul>
-			</div>
-			<!--  
-			<div th:if="${#session} != null">
-				<div th:if="${#session.isLogin}" th:text="${#session.user_auth_details.name}"></div>
-			</div>
-			-->
+
 		</menu>
 	</div>
 	
