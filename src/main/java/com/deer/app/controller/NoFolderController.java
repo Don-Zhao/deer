@@ -10,4 +10,9 @@ public class NoFolderController {
 	public String test() {
 		return "home";
 	}
+	
+	@RequestMapping("/login")
+	public String login() {
+		return "login";
+	}
 }
