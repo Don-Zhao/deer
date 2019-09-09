@@ -15,4 +15,9 @@ public class NoFolderController {
 	public String login() {
 		return "login";
 	}
+	
+	@RequestMapping("/user")
+	public String user() {
+		return "user";
+	}
 }

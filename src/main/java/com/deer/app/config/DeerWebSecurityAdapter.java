@@ -16,6 +16,7 @@ public class DeerWebSecurityAdapter extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 			.antMatchers("/home").hasAuthority("ADMIN")
+			.antMatchers("/user").hasAuthority("USER")
 			.antMatchers("/css/**", "/js/**", "/images/**", "/common.html").permitAll()
 			.anyRequest().authenticated()
 			.and()
