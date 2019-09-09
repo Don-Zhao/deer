@@ -15,12 +15,11 @@ public class DeerWebSecurityAdapter extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers("/home").hasAuthority("ADMIN")
 			.antMatchers("/user").hasAuthority("USER")
-			.antMatchers("/css/**", "/js/**", "/images/**", "/common.html").permitAll()
+			.antMatchers("/css/**", "/js/**", "/images/**", "/common.html", "/login.html").permitAll()
 			.anyRequest().authenticated()
 			.and()
-			.formLogin();//.loginPage("/login").permitAll();
+			.formLogin();
 	}
 
 	@Bean

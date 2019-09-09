@@ -6,7 +6,8 @@
   	  <div th:replace="~{common::header('Deer System')}"></div>
       <div class="content">
       	<div style="text-align: center;">
-      		HOME
+      		欢迎你，<span th:text="${username}"></span>!<br />
+      		<a href="/logout">退出</a>
       	</div>
       </div>
       <div th:replace="~{common::footer}"></div>
