@@ -19,7 +19,7 @@ public class NoFolderController {
 		return "home";
 	}
 	
-	@RequestMapping("/index")
+	@RequestMapping("/login")
 	public String login() {
 		return "login";
 	}

@@ -16,10 +16,12 @@ public class DeerWebSecurityAdapter extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 			.antMatchers("/user").hasAuthority("USER")
-			.antMatchers("/css/**", "/js/**", "/images/**", "/common.html", "/login.html").permitAll()
+			.antMatchers("/css/**", "/js/**", "/images/**", "/common.html", "/login").permitAll()
 			.anyRequest().authenticated()
 			.and()
-			.formLogin();
+			.formLogin().loginPage("/login")
+			.and()
+			.csrf().disable();
 	}
 
 	@Bean
