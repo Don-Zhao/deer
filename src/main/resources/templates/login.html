@@ -4,20 +4,15 @@
   <head>
   	<title>登录</title>
   	<meta charset="UTF-8">
-  	<script type="text/javascript" src="/js/jquery-3.2.1.min.js" th:src="@{/js/jquery.min.js}"></script>
+  	<script type="text/javascript" src="/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
 	<link rel="stylesheet" type="text/css" href="/css/common.css" th:href="@{/css/bootstrap.css}">
-	<script type="text/javascript" src="/js/jquery-3.2.1.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+	<link rel="stylesheet" type="text/css" href="/css/common.css" th:href="@{/css/common.css}">
   </head>
-  <style type="text/css">
-  	body {
-		  padding-top: 20px;
-		  padding-bottom: 20px;
-	}
-  </style>
   <body>
       <div class="container" style="width: 30%;">
       		<form class="form-signin" th:action="@{/login}" method="POST">
-      			<h2 class="form-signin-heading">用户登录</h2>
+      			<h2 class="form-signin-heading pull-center">用户登录</h2>
       			<span th:if="${param.error}" class="text-primary" th:text="用户名或者密码错误，请重新输入"></span>
       			<span th:if="${param.logout}" class="text-primary" th:text="用户已经安全退出"></span>
       			<label for="username" class="sr-only">用户名</label>

@@ -4,15 +4,10 @@
   <head>
   	<title>用户中心</title>
   	<meta charset="UTF-8">
-  	<script type="text/javascript" src="/js/jquery-3.2.1.min.js" th:src="@{/js/jquery.min.js}"></script>
+  	<script type="text/javascript" src="/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
 	<link rel="stylesheet" type="text/css" href="/css/common.css" th:href="@{/css/bootstrap.css}">
-	<script ype="text/javascript" src="/js/jquery-3.2.1.min.js" th:src="@{/js/bootstrap.min.js}"></script>
-	<style type="text/css">
-	  	body {
-			  padding-top: 20px;
-			  padding-bottom: 20px;
-		}
-  	</style>
+	<script type="text/javascript" src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+	<link rel="stylesheet" type="text/css" href="/css/common.css" th:href="@{/css/common.css}">
   </head>
   <body>
   	  <div class="container">
@@ -22,7 +17,7 @@
 	  	  </div>
   	  </div>
       <div class="container">
-      	<div class="jumbotron">
+      	<div class="jumbotron pull-center">
       		<h1 th:text=|欢迎您，${username}|></h1>
       	</div>
       </div>
