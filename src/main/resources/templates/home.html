@@ -1,15 +1,30 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="~{common::head('Home')}"></head>
+  <head>
+  	<title>用户中心</title>
+  	<meta charset="UTF-8">
+  	<script type="text/javascript" src="/js/jquery-3.2.1.min.js" th:src="@{/js/jquery.min.js}"></script>
+	<link rel="stylesheet" type="text/css" href="/css/common.css" th:href="@{/css/bootstrap.css}">
+	<script ype="text/javascript" src="/js/jquery-3.2.1.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+	<style type="text/css">
+	  	body {
+			  padding-top: 20px;
+			  padding-bottom: 20px;
+		}
+  	</style>
+  </head>
   <body>
-  	  <div th:replace="~{common::header('Deer System')}"></div>
-      <div class="content">
-      	<div style="text-align: center;">
-      		欢迎你，<span th:text="${username}"></span>!<br />
-      		<a href="/logout">退出</a>
+  	  <div class="container">
+	  	  <div class="navbar navbar-default">
+	  	  	<a class="navbar-brand" href="#">Deer System</a>
+	  	  	<a class="navbar-brand pull-right" th:href="@{/logout}">退出</a>
+	  	  </div>
+  	  </div>
+      <div class="container">
+      	<div class="jumbotron">
+      		<h1 th:text=|欢迎您，${username}|></h1>
       	</div>
       </div>
-      <div th:replace="~{common::footer}"></div>
   </body>
 </html> 
